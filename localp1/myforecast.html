@@ -1,29 +1,27 @@
-{% load static %}
-
 <!DOCTYPE html>
 <html>
 <head>
 <title>Title of the document</title>
-<link rel="stylesheet" type="text/css" href="{% static 'weather/vendors/bootstrap/css/bootstrap.css' %}" />
-<link rel="stylesheet" type="text/css" href="{% static 'weather/css/styles.css' %}" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+<link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
 
 <body>
   <div class="container">
         <div id="top" class="row">
-          <div class="col-2"><img class="small" src="/static/weather/assets/AlertIcon.svg"></img></div>
-          <div class="col-8 alertText"> Heat wave advisory in your area!</div>
-          <div class="col-2"><img class="small" src="/static/weather/assets/SettingsIcon.svg" style="width:60%"></img></div>
+          <div class="col-2"><img class="small" src="NoAlertIcon.svg"></img></div>
+          <div class="col-8"></div>
+          <div class="col-2"><img class="small" src="SettingsIcon.svg" style="width:60%"></img></div>
         </div>
         <div class="row delete">
           <div class="col-10"></div>
-          <div class="col-2"><img class="small" src="/static/weather/assets/DeleteIcon.svg" style="width:30%"></img></div>
+          <div class="col-2"><img class="small" src="DeleteIcon.svg" style="width:30%"></img></div>
         </div>
         <div class="row">
           <div class="col-1"></div>
-          <div class="col-3"><img class="medium" src="/static/weather/assets/SunnyIcon.svg"></img></div>
-          <div class="col-4"><img class="large" src="/static/weather/assets/AlertedSunnyIcon.svg"></img></div>
-          <div class="col-3"><img class="medium" src="/static/weather/assets/DarkOvercastIcon.svg"></img></div>
+          <div class="col-3"><img class="medium" src="SunnyIcon.svg"></img></div>
+          <div class="col-4"><img class="large" src="SunnyIcon.svg"></img></div>
+          <div class="col-3"><img class="medium" src="DarkOvercastIcon.svg"></img></div>
           <div class="col-1"></div>
         </div>
         <div class="row">
@@ -42,7 +40,7 @@
     <div class="container">
       <div class="row">
         <div class="col-3"></div>
-        <div class="col-1"><img id="add" class="small" src="/static/weather/assets/AddIcon.svg"></img></div>
+        <div class="col-1"><img id="add" class="small" src="AddIcon.svg"></img></div>
         <div class="col-4"><input id="addText" type="text" value="Search city, region ..."</input></div>
         <div class="col-2"></div>
         <div class="col-2"></div>

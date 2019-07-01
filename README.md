@@ -18,3 +18,7 @@ URL: `http://<your host IP here>:8000/weather/`
 * Forecast (single location) with alert: `weather/templates/weather/forecast/alert/`
 * Comparison across locations no alert: `weather/templates/weather/comparison/`
 * Comparison across locations with alert: `weather/templates/weather/comparison/alert/`
+
+### ALLOWED_HOSTS = ["project-1-starter-code-qpham843-qpham843667163.codeanyapp.com"]
+
+### VERSION THAT CAN BE RUN LOCALLY IS IN THE FOLDER "localp1"

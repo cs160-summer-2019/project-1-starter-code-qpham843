@@ -1,31 +1,29 @@
-{% load static %}
-
 <!DOCTYPE html>
 <html>
 <head>
 <title>Title of the document</title>
-<link rel="stylesheet" type="text/css" href="{% static 'weather/vendors/bootstrap/css/bootstrap.css' %}" />
-<link rel="stylesheet" type="text/css" href="{% static 'weather/css/styles.css' %}" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+<link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
 
 <body>
   <div class="container">
         <div id="top" class="row">
-          <div class="col-2"><img id="theAlert" class="small" src="/static/weather/assets/AlertIcon.svg" onclick="deleteAlertText();"></img></div>
+          <div class="col-2"><img id="theAlert" class="small" src="AlertIcon.svg" onclick="deleteAlertText();"></img></div>
           <div id="theAlertText" class="col-8 alertText"> Heavy Rain in your area!</div>
-          <div class="col-2"><img class="small" src="/static/weather/assets/SettingsIcon.svg" style="width:60%"></img></div>
+          <div class="col-2"><img class="small" src="SettingsIcon.svg" style="width:60%"></img></div>
         </div>
   </div>
   <div id="section1" class="container">
         <div class="row delete">
           <div class="col-10"></div>
-          <div class="col-2"><img class="small" src="/static/weather/assets/DeleteIcon.svg" style="width:30%" onclick="deleteSection1();"></img></div>
+          <div class="col-2"><img class="small" src="DeleteIcon.svg" style="width:30%" onclick="deleteSection1();"></img></div>
         </div>
         <div class="row">
           <div class="col-1"></div>
-          <div class="col-3"><img class="medium" src="/static/weather/assets/SunnyIcon.svg"></img></div>
-          <div class="col-4"><img class="large" src="/static/weather/assets/AlertedSunnyIcon.svg"></img></div>
-          <div class="col-3"><img class="medium" src="/static/weather/assets/DarkOvercastIcon.svg"></img></div>
+          <div class="col-3"><img class="medium" src="SunnyIcon.svg"></img></div>
+          <div class="col-4"><img class="large" src="AlertedSunnyIcon.svg"></img></div>
+          <div class="col-3"><img class="medium" src="DarkOvercastIcon.svg"></img></div>
           <div class="col-1"></div>
         </div>
         <div class="row">
@@ -44,13 +42,13 @@
     <div id="section2" class="container">
       <div class="row delete">
         <div class="col-10"></div>
-        <div class="col-2"><img class="small" src="/static/weather/assets/DeleteIcon.svg" style="width:30%" onclick="deleteSection2();"></img></div>
+        <div class="col-2"><img class="small" src="DeleteIcon.svg" style="width:30%" onclick="deleteSection2();"></img></div>
       </div>
       <div class="row">
         <div class="col-1"></div>
-        <div class="col-3"><img class="medium" src="/static/weather/assets/DarkOvercastIcon.svg"></img></div>
-        <div class="col-4"><img class="large" src="/static/weather/assets/AlertedRainyIcon.svg"></img></div>
-        <div class="col-3"><img class="medium" src="/static/weather/assets/RainyIcon.svg"></img></div>
+        <div class="col-3"><img class="medium" src="AlertedRainyIcon.svg"></img></div>
+        <div class="col-4"><img class="large" src="RainyIcon.svg"></img></div>
+        <div class="col-3"><img class="medium" src="DarkCloudIcon.svg"></img></div>
         <div class="col-1"></div>
       </div>
       <div class="row">
@@ -69,7 +67,7 @@
     <div class="container">
       <div class="row">
         <div class="col-3"></div>
-        <div class="col-1"><img id="add" class="small" src="/static/weather/assets/AddIcon.svg" onclick="addSection();"></img></div>
+        <div class="col-1"><img id="add" class="small" src="AddIcon.svg" onclick="addSection();"></img></div>
         <div class="col-4"><input id="addText" type="text" value="Search city, region ..."</input></div>
         <div class="col-2"></div>
         <div class="col-2"></div>
@@ -91,7 +89,7 @@
 <script>
   function deleteAlertText() {
     document.getElementById("theAlertText").innerHTML = "";
-    document.getElementById("theAlert").src = "/static/weather/assets/NoAlertIcon.svg"
+    document.getElementById("theAlert").src = "NoAlertIcon.svg"
   }
 
   function deleteSection1() {
@@ -104,9 +102,9 @@
 
   function addSection() {
     if (document.getElementById("addText").value == "Berkeley") {
-      var section1text = "<div class='row delete'><div class='col-10'></div><div class='col-2'><img class='small' src='/static/weather/assets/DeleteIcon.svg' style='width:30%'' onclick='deleteSection1();'></img></div></div>" +
-        "<div class='row'><div class='col-1'></div><div class='col-3'><img class='medium' src='/static/weather/assets/SunnyIcon.svg'></img></div>" +
-        "<div class='col-4'><img class='large' src='/static/weather/assets/AlertedSunnyIcon.svg'></img></div><div class='col-3'><img class='medium' src='/static/weather/assets/DarkOvercastIcon.svg'></img></div>" +
+      var section1text = "<div class='row delete'><div class='col-10'></div><div class='col-2'><img class='small' src='DeleteIcon.svg' style='width:30%'' onclick='deleteSection1();'></img></div></div>" +
+        "<div class='row'><div class='col-1'></div><div class='col-3'><img class='medium' src='SunnyIcon.svg'></img></div>" +
+        "<div class='col-4'><img class='large' src='AlertedSunnyIcon.svg'></img></div><div class='col-3'><img class='medium' src='DarkOvercastIcon.svg'></img></div>" +
         "<div class='col-1'></div></div><div class='row'><div class='col-1'></div><div class='col-3 time' style='margin-left: 15px;'> 1 PM </div>" +
         "<div class='col-4 time' style='text-decoration: underline;'> 2 PM </div><div class='col-3 time' style='margin-left: 5px;'> 3 PM </div><div class='col-1'></div>" +
         "</div><div class='row'><div class='col-4 city'></div><div class='col-4 city'> Berkeley, CA</div><div class='col-4 city'></div></div>"
@@ -114,9 +112,9 @@
       berkeleyAlertText();
     }
     if (document.getElementById("addText").value == "Eureka") {
-      var section2text = "<div class='row delete'><div class='col-10'></div><div class='col-2'><img class='small' src='/static/weather/assets/DeleteIcon.svg' style='width:30%'' onclick='deleteSection2();'></img></div></div>" +
-        "<div class='row'><div class='col-1'></div><div class='col-3'><img class='medium' src='/static/weather/assets/DarkOvercastIcon.svg'></img></div>" +
-        "<div class='col-4'><img class='large' src='/static/weather/assets/AlertedRainyIcon.svg'></img></div><div class='col-3'><img class='medium' src='/static/weather/assets/RainyIcon.svg'></img></div>" +
+      var section2text = "<div class='row delete'><div class='col-10'></div><div class='col-2'><img class='small' src='DeleteIcon.svg' style='width:30%'' onclick='deleteSection2();'></img></div></div>" +
+        "<div class='row'><div class='col-1'></div><div class='col-3'><img class='medium' src='DarkOvercastIcon.svg'></img></div>" +
+        "<div class='col-4'><img class='large' src='AlertedRainyIcon.svg'></img></div><div class='col-3'><img class='medium' src='RainyIcon.svg'></img></div>" +
         "<div class='col-1'></div></div><div class='row'><div class='col-1'></div><div class='col-3 time' style='margin-left: 15px;'> 1 PM </div>" +
         "<div class='col-4 time' style='text-decoration: underline;'> 2 PM </div><div class='col-3 time' style='margin-left: 5px;'> 3 PM </div><div class='col-1'></div>" +
         "</div><div class='row'><div class='col-4 city'></div><div class='col-4 city'> Eureka, CA</div><div class='col-4 city'></div></div>"
@@ -126,12 +124,12 @@
   }
   function berkeleyAlertText() {
     document.getElementById("theAlertText").innerHTML = "Heat wave advisory in your area!";
-    document.getElementById("theAlert").src = "/static/weather/assets/AlertIcon.svg"
+    document.getElementById("theAlert").src = "AlertIcon.svg"
   }
 
   function eurekaAlertText() {
     document.getElementById("theAlertText").innerHTML = "Heavy rain in your area!";
-    document.getElementById("theAlert").src = "/static/weather/assets/AlertIcon.svg"
+    document.getElementById("theAlert").src = "AlertIcon.svg"
   }
 </script>
 
